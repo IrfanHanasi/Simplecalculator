@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Calculator</title>
+</head>
+<body>
+Enter First  Number: <input type="number" id="num1" required autofocus>
+Enter Second Number: <input type="number" id="num2" required>
+  <input type="button" value="ADD" onclick="compute();" id="btn">
+  <input type="button" value="SUB" onclick="compute();" id="btn">
+  <input type="button" value="MUL" onclick="compute();" id="btn">
+  <input type="button" value="DIV" onclick="compute();" id="btn">
+  <div id="result">
+    
+  </div>
+<script>
+  function compute()
+  {
+    var n1=document.getElementById("num1").value;
+    var n2=document.getElementById("num2").value;
+    var bttn=document.getElementById("btn").value;
+    var res;
+    if (bttn == "ADD")
+     res=+n1 + +n2;
+   else if (bttn == "SUB")
+     res=+n1 - +n2; 
+   else if (bttn == "MUL")
+     res=+n1 * +n2;
+   else
+	  res=+n1 / +n2;
+     
+    alert("The Result is"+ res);
+   document..getElementById("result").innerText=res;
+  }
+  </script>  
+</body>
+</html>
